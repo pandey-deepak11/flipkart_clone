@@ -1,0 +1,46 @@
+.container {
+  margin: 10px 15px 10px 8px;
+  position: relative;
+}
+
+.left-arrow-button {
+  background-color: white;
+  position: absolute;
+  height: 110px;
+  width: 50px;
+  top: 30%;
+  left: 0px;
+  border-width: 0px;
+}
+
+.left-arrow {
+  height: 30px;
+  width: 30px;
+}
+
+.right-arrow {
+  height: 30px;
+  width: 30px;
+}
+
+.right-arrow-button {
+  background-color: white;
+  position: absolute;
+  height: 110px;
+  width: 50px;
+  top: 30%;
+  right: 0px;
+  border-width: 0px;
+}
+.carousel-img {
+  width: 100%;
+  height: 280px;
+}
+
+.discounts {
+  margin: 10px 15px 10px 8px;
+}
+
+.discounts img {
+  width: 100%;
+}

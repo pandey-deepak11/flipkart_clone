@@ -7,7 +7,7 @@ import carrt from "./../../images/cart.png";
 
 const Header = () => {
   return (
-    <>
+    <div className="navbar">
       <nav className="navigation">
         <div className="logo">
           <img src={logo} alt="flipkart-logo" />
@@ -67,7 +67,7 @@ const Header = () => {
           <p>Cart</p>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 
