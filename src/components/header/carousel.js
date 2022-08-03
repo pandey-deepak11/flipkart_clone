@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import "./carousel.css";
 import mattress from "./../../images/mattress.webp";
 import infinix_lap from "./../../images/infinix_lap.webp";
@@ -9,17 +9,18 @@ const Carousel = () => {
   const [active, setActive] = useState(0);
   const images = [mattress, infinix_lap, infinix_mobile];
 
-  setInterval(
-    useMemo(() => {
-      if (active < images.length - 1 && active >= 0) {
-        setActive(active + 1);
-      }
-      if (active >= images.length - 1) {
-        setActive(0);
-      }
-    }, 7000),
-    [active]
-  );
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (active < images.length - 1 && active >= 0) {
+  //       setActive(active + 1);
+  //     }
+  //     if (active >= images.length - 1) {
+  //       setActive(0);
+  //     }
+  //   }, 3000);
+
+  //   return clearInterval(interval);
+  // }, [active]);
 
   const rightClickHandler = (e) => {
     if (active < images.length - 1 && active >= 0) {
@@ -44,14 +45,14 @@ const Carousel = () => {
     }
   };
 
-  setInterval(() => {
-    if (active < images.length - 1 && active >= 0) {
-      setActive(active + 1);
-    }
-    if (active >= images.length - 1) {
-      setActive(0);
-    }
-  }, 10000);
+  // setInterval(() => {
+  //   if (active < images.length - 1 && active >= 0) {
+  //     setActive(active + 1);
+  //   }
+  //   if (active >= images.length - 1) {
+  //     setActive(0);
+  //   }
+  // }, 10000);
 
   return (
     <>
@@ -82,6 +83,7 @@ const Carousel = () => {
           src={images[active]}
           alt="mattress"
           value={active}
+          loading="lazy"
         />
 
         <button
@@ -106,7 +108,7 @@ const Carousel = () => {
         </button>
       </div>
       <div className="discounts">
-        <img src={discounts} alt="discounts" />
+        <img src={discounts} alt="discounts" loading="lazy" />
       </div>
     </>
   );

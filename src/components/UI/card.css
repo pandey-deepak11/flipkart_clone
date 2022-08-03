@@ -1,0 +1,36 @@
+.body {
+  font-size: 1rem;
+}
+
+.card-container {
+  /* width: 150px; */
+  /* border: 1px solid black; */
+  margin: 0px 10px 10px 10px;
+  width: 180px;
+  padding: 10px;
+  background: white;
+}
+
+.card-container img {
+  height: 160px;
+  width: 160px;
+  margin-bottom: 10px;
+}
+
+.card-container p {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card-name {
+  font-weight: 500;
+}
+
+.card-offer {
+  color: green;
+}
+
+.card-caption {
+  opacity: 0.6;
+}
