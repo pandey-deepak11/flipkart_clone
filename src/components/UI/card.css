@@ -11,6 +11,10 @@
   background: white;
 }
 
+.card-container:hover {
+  transform: scale(1.05);
+}
+
 .card-container img {
   height: 160px;
   width: 160px;
@@ -18,7 +22,7 @@
 }
 
 .card-container p {
-  font-size: 0.8rem;
+  font-size: 0.83rem;
   margin-bottom: 10px;
   text-align: center;
 }
@@ -33,4 +37,11 @@
 
 .card-caption {
   opacity: 0.6;
+}
+
+.visible {
+  transform: translateX(200%);
+}
+
+.hidden {
 }

@@ -1,0 +1,64 @@
+body {
+  font-size: 16px;
+}
+
+footer {
+  display: flex;
+  align-items: top;
+  background: #172337;
+  color: white;
+  padding: 30px;
+}
+
+.footer {
+  display: flex;
+  width: 55%;
+  font-size: 0.75rem;
+  font-weight: 400;
+  border-right: 1px solid gray;
+  border-right: 1px solid gray;
+  justify-content: stretch;
+}
+
+.about-title,
+.help-title,
+.policy-title,
+.social-title {
+  margin: 20px 20px 25px 30px;
+  /* border: 1px solid red; */
+  color: gray;
+}
+
+.about-child,
+.help-child,
+.policy-child,
+.social-child {
+  margin: 0px 20px 10px 30px;
+}
+
+.about-child p,
+.help-child p,
+.policy-child p,
+.social-child p {
+  margin-bottom: 10px;
+}
+
+.contact {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  margin: 30px 0px 50px 30px;
+  font-size: 0.8rem;
+}
+
+.mail-us-title,
+.address-title {
+  margin: -10px 0px 20px 0px;
+  color: gray;
+  margin-left: 25px;
+}
+
+.address-child,
+.mail-us-child {
+  margin-left: 25px;
+}
