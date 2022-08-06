@@ -5,12 +5,14 @@ import Header from "./components/header/header";
 import QuickLinks from "./components/header/quickLinks";
 // import Card from "./components/UI/card";
 // import BigCard from "./components/UI/bigCard";
-
+// import Cart from "./components/cart/cart";
+// import CartCard from "./components/UI/cartCard";
 // import PriceCard from "./components/UI/priceCard";
 
 function App() {
   return (
     <>
+      {/* <Cart /> */}
       <Header />
       <QuickLinks />
       <Carousel />

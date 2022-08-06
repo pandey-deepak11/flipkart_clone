@@ -1,0 +1,107 @@
+body {
+  font-size: 16px;
+}
+.cart-item {
+  margin: 0px 20px 0px 20px;
+  padding: 20px;
+  background: white;
+  width: 70%;
+  border-bottom: 1px solid gray;
+}
+
+.cart-item-img-name {
+  display: flex;
+  align-items: center;
+}
+
+.cart-item-img {
+  margin: 15px;
+  height: 100px;
+  width: 110px;
+  cursor: pointer;
+}
+
+.cart-item-name-deliveryDate {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.item-cart-heading {
+  font-size: 1.1rem;
+}
+
+.item-cart-heading:hover,
+.cart-item-saveLater:hover,
+.cart-item-removeItem:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.item-cart-deliveryDate {
+  font-size: 0.9rem;
+}
+
+.item-cart-deliveryfree {
+  color: green;
+}
+
+.item-cart-color {
+  color: gray;
+  margin: 5px 0px 10px 0px;
+  font-size: 0.9rem;
+}
+
+.item-cart-seller {
+  font-size: 0.8;
+  color: gray;
+  margin: 0px 0px 25px 0px;
+}
+
+.cart-item-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-item-oldPrice {
+  text-decoration-line: line-through;
+  font-size: 1rem;
+  color: gray;
+}
+
+.cart-item-newPrice {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.cart-item-offer,
+.cart-item-offersApplied {
+  color: green;
+}
+
+.cart-item-quantity {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart-item-increaseItem,
+.cart-item-reduceItem {
+  padding: 7px 12px 7px 12px;
+  border-width: 0.5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cart-item-no {
+  border: 1px solid black;
+  padding: 5px 15px 5px 15px;
+}
+
+.cart-item-saveLater,
+.cart-item-removeItem {
+  margin-left: 20px;
+  font-weight: 500;
+}
