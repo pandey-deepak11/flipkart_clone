@@ -3,6 +3,7 @@ import Footer from "./components/footer/footer";
 import Carousel from "./components/header/carousel";
 import Header from "./components/header/header";
 import QuickLinks from "./components/header/quickLinks";
+import Login from "./components/login/login";
 // import Card from "./components/UI/card";
 // import BigCard from "./components/UI/bigCard";
 // import Cart from "./components/cart/cart";
@@ -12,12 +13,13 @@ import QuickLinks from "./components/header/quickLinks";
 function App() {
   return (
     <>
+      <Login />
       {/* <Cart /> */}
-      <Header />
+      {/* <Header />
       <QuickLinks />
       <Carousel />
       <DealsOfDay />
-      <Footer />
+      <Footer /> */}
       {/* <PriceCard /> */}
       {/* <Card /> */}
       {/* <BigCard /> */}
