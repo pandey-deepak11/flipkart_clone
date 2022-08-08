@@ -1,0 +1,133 @@
+.body {
+  font-size: 16px;
+}
+
+.product-main {
+  background: white;
+}
+
+.product-container {
+  /* padding: 0px 0px 0px 0px; */
+  display: flex;
+  gap: 100px;
+}
+
+.product-main-img {
+  padding: 60px;
+  margin: 0px 30px 10px 30px;
+  border: 1px solid rgb(202, 200, 200);
+  box-shadow: 10px 10px 5px lightblue;
+}
+
+.product-img {
+  /* padding: 30px 30px 30px 30px; */
+  /* border: 1px solid rgb(218, 240, 175); */
+  /* margin: 40px 40px 20px 80px; */
+}
+
+.product-main-details {
+  padding: 15px;
+  /* border: 1px solid rgb(202, 200, 200); */
+}
+
+.product-main-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.product-main-price {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+
+.product-main-newPrice {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.product-main-oldPrice {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: gray;
+  text-decoration: line-through;
+}
+
+.product-main-offers {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.product-main-rating {
+  border: 1px solid green;
+  padding: 5px;
+  font-size: 1.2rem;
+  width: 65px;
+  color: white;
+  background: green;
+}
+
+.product-main-ratings {
+  font-size: 1.5rem;
+  color: gray;
+}
+
+.product-main-offers {
+  color: green;
+  font-size: 1.5rem;
+}
+
+.product-main-seller {
+  font-size: 1.5rem;
+  color: gray;
+  margin: 20px 0px 20px 0px;
+}
+
+.product-main-color {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.product-main-supercoin {
+  height: 100px;
+  width: 450px;
+  margin-bottom: 30px;
+  /* border-bottom: 1px solid gray; */
+}
+
+.product-main-btn {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.btn-svg {
+  width: 20px;
+  height: 20px;
+  margin: 9px 5px 0px 5px;
+  /* margin-top: px; */
+}
+
+.btn-addCart {
+  margin: 0px 20px 20px 10px;
+  width: 200px;
+  padding: 5px;
+  font-size: 1.1rem;
+  background: #ff9f00;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-buy {
+  margin: 0px 0px 20px 20px;
+  width: 200px;
+  padding: 5px;
+  font-size: 1.1rem;
+  background: #fb641b;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

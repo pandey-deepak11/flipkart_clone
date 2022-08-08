@@ -31,3 +31,56 @@
 
 .quickLinks > div > span {
 }
+
+.fashion,
+.electronics {
+  position: relative;
+  display: inline-block;
+}
+
+.fashion-drpdown,
+.electronics-dropdown {
+  display: none;
+  position: absolute;
+  top: 80px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.home-dropdown,
+.toys-dropdown {
+  display: none;
+  position: absolute;
+  top: 150px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.fashion:hover .fashion-drpdown,
+.electronics:hover .electronics-dropdown,
+.home:hover .home-dropdown,
+.toys:hover .toys-dropdown {
+  display: block;
+}
+
+.quickLinks-p:hover,
+.fashion-drpdown-items p:hover,
+.electronics-drpdown-items p:hover,
+.home-dropdown-items p:hover,
+.toys-dropdown-items p:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.fashion-drpdown-items p,
+.electronics-drpdown-items p,
+.home-dropdown-items p,
+.toys-dropdown-items p {
+  text-align: center;
+  margin-bottom: 10px;
+  /* border-bottom: 1px solid rgb(163, 160, 160); */
+}

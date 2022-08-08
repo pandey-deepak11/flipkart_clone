@@ -48,6 +48,18 @@ const QuickLinks = () => {
               </svg>
             </span>
           </p>
+          <div className="fashion-drpdown">
+            <div className="fashion-drpdown-items">
+              <p>Men Jeans</p>
+              <p>Women jeans</p>
+              <p>Kid's Wear</p>
+              <p>Party wear</p>
+              <p>Ethnic Wear</p>
+              <p>Women Shoes</p>
+              <p>Men Shoes</p>
+              <p>Jackets</p>
+            </div>
+          </div>
         </div>
         <div className="electronics">
           <img className="quickLink-img" src={electronics} alt="electronics" />
@@ -71,6 +83,17 @@ const QuickLinks = () => {
               </svg>
             </span>
           </p>
+          <div className="electronics-dropdown">
+            <div className="electronics-drpdown-items">
+              <p>Mobiles</p>
+              <p>Tablet</p>
+              <p>Laptops</p>
+              <p>PC</p>
+              <p>Television</p>
+              <p>Washing Machines</p>
+              <p>AC</p>
+            </div>
+          </div>
         </div>
         <div className="home">
           <img className="quickLink-img" src={home} alt="home" />
@@ -94,6 +117,19 @@ const QuickLinks = () => {
               </svg>
             </span>
           </p>
+          <div className="home-dropdown">
+            <div className="home-dropdown-items">
+              <p>Sanitizer Sprays</p>
+              <p>Jugs</p>
+              <p>Cutlery Sets</p>
+              <p>Dinner Sets</p>
+              <p>Hammers</p>
+              <p>Solar Panels</p>
+              <p>Bath Linen Sets</p>
+              <p>Table Runners</p>
+              <p>Coasters</p>
+            </div>
+          </div>
         </div>
         <div className="appliances">
           <img className="quickLink-img" src={appliances} alt="appliances" />
@@ -125,6 +161,15 @@ const QuickLinks = () => {
               </svg>
             </span>
           </p>
+          <div className="toys-dropdown">
+            <div className="toys-dropdown-items">
+              <p>Teddy Set</p>
+              <p>Chocolates</p>
+              <p>Puzzles</p>
+              <p>Remote Car</p>
+              <p>Decorative Items</p>
+            </div>
+          </div>
         </div>
       </div>
     </>

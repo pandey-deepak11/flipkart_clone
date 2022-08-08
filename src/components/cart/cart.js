@@ -10,14 +10,15 @@ const Cart = () => {
       <div className="cart-page">
         <section className="cart-main">
           <p className="flipkart-grocery">
-            Your Cart have <span>No of items</span>
+            <span className="cart-userName">Deepak</span>, Your Cart have{" "}
+            <span>No of items</span>
           </p>
           <article className="cart-address-button">
             <div className="cart-address">
               <p>
                 {" "}
                 Deliver to :{" "}
-                <span className="cart-userName"> Deepak Kumar ,829128</span>
+                <span className="cart-Name"> Deepak Kumar ,829128</span>
                 <span className="cart-home-icon">Home</span>
               </p>
               <p className="cart-state">

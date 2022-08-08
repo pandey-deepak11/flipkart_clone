@@ -1,15 +1,23 @@
 body {
   font-size: 16px;
+  /* position: relative; */
 }
 
 .login-modal {
   width: 50%;
   /* background: red; */
-  margin: 40px 20% 10% 30%;
+  background: white;
+  /* position: fixed;
+  top: -20px;
+  left: 40px;
+  z-index: 10; */
+  margin: 15px 60px 15px 330px;
 }
 
 .login-section {
   display: flex;
+
+  /* overflow-y: scroll; */
 }
 
 .login-UI {
@@ -17,9 +25,17 @@ body {
   color: white;
   background: #2874f0;
   padding: 20px;
+  /* position: relative; */
+  /* z-index: 5; */
 }
 
 .login-text {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 40px 20px 20px 20px;
+}
+
+.logout-text {
   font-size: 2rem;
   font-weight: 600;
   margin: 40px 20px 20px 20px;
@@ -32,12 +48,19 @@ body {
   margin: 0px 30px 150px 0px;
 }
 
+.logout-descp {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin: 0px 30px 80px 0px;
+}
+
 .login-form {
   position: relative;
   width: 60%;
   margin: 0px 30px 0px 30px;
   padding: 40px 20px 20px 20px;
-  /* background: yellow; */
+  background: white;
 }
 
 label {
@@ -48,6 +71,7 @@ label {
 
 .login-blueText {
   color: blue;
+  cursor: pointer;
 }
 
 #login-email,
@@ -94,6 +118,7 @@ label {
   font-weight: 500;
   border: 1px solid rgb(149, 147, 147);
   margin: 15px 0px 90px 0px;
+  cursor: pointer;
 }
 
 .img-google {
@@ -108,4 +133,13 @@ label {
   right: 10px;
   top: 150px;
   /* font-weight: 500; */
+}
+
+.login-close {
+  position: absolute;
+  top: 20px;
+  right: 250px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }

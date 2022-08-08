@@ -47,7 +47,7 @@ footer {
   display: flex;
   align-items: top;
   justify-content: space-between;
-  margin: 30px 0px 50px 30px;
+  margin: 30px 0px 50px 0px;
   font-size: 0.8rem;
 }
 

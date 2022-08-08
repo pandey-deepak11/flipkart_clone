@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { deals } from "../../assets/data";
 import clock from "./../../images/clock.png";
 import dealsSide from "./../../images/dealsSide.webp";
@@ -154,6 +155,7 @@ const DealsOfDay = () => {
             </svg>
           </button>
           {suggestedItems.map((prod) => (
+            // <Link to={`/product/${prod.id}`}>
             <PriceCard
               name={prod.name}
               rating={prod.rating}
@@ -164,6 +166,7 @@ const DealsOfDay = () => {
               pay={prod.pay}
               url={prod.url}
             />
+            // </Link>
           ))}
           <button
             className="right-arrow-button-one"
