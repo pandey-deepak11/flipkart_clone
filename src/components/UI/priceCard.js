@@ -1,4 +1,5 @@
 import React from "react";
+// import { useParams } from "react-router-dom";
 import "./priceCard.css";
 import coin from "./../../images/coin.webp";
 // import { suggestedItems } from "./../../assets/data";
@@ -15,7 +16,7 @@ const PriceCard = ({
 }) => {
   return (
     <>
-      <div className="priceCard">
+      <div className="priceCard slide">
         <img src={url} alt="priceCard" className="priceCard-img" />
         <p className="priceCard-name">{name}</p>
         <div className="priceCard-two">
@@ -35,7 +36,7 @@ const PriceCard = ({
         {pay ? (
           <p className="pay">
             {pay}
-            <img className="coin" src={coin} />
+            <img className="coin" src={coin} alt="coin" />
           </p>
         ) : (
           ""

@@ -10,6 +10,7 @@
   display: flex;
   /* align-items: center; */
   position: relative;
+  /* z-index: -1; */
 }
 
 .header {
@@ -75,6 +76,11 @@
   position: relative;
 }
 
+.deals-product a {
+  color: black;
+  text-decoration: none;
+}
+
 .side-img-container {
   padding: 4px;
   background: white;
@@ -101,10 +107,6 @@
   /* justify-content: space-evenly; */
 }
 
-.old {
-  transform: translateX(30%);
-}
-
 .left-arrow-button,
 .left-arrow-button-one {
   background-color: white;
@@ -114,6 +116,7 @@
   left: 0px;
   border-width: 0px;
   z-index: 1;
+  cursor: pointer;
 }
 
 .left-arrow {
@@ -135,6 +138,7 @@
   right: 0px;
   border-width: 0px;
   z-index: 1;
+  cursor: pointer;
 }
 
 .wider {
@@ -149,6 +153,24 @@
   overflow: hidden;
   margin: 0px 10px 0px 10px;
   position: relative;
+  /* z-index: -1; */
+}
+
+.recent-searched a {
+  color: black;
+  text-decoration: none;
+}
+
+.deals-link-s,
+.deals-link-sa {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  scroll-behavior: smooth;
+}
+
+.deals-link:link {
+  text-decoration: none;
 }
 
 .left-arrow-button-one {
@@ -173,6 +195,7 @@
   width: 50px;
   border-width: 0px;
   z-index: 1;
+  cursor: pointer;
 }
 
 .right-arrow-button-one:hover,

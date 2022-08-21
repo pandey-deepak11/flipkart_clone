@@ -6,11 +6,16 @@
   background: white;
   padding: 10px;
   /* border: 1px solid black; */
-  width: 400px;
+  /* width: 400px; */
   height: 330px;
   /* margin: 0px 10px 0px 10px; */
   position: relative;
+  cursor: pointer;
 }
+/* 
+.slide {
+  transform: translateX(100%);
+} */
 
 .priceCard:hover {
   transform: scale(1.03);

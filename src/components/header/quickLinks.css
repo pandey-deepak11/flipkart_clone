@@ -1,3 +1,9 @@
+.welcome-heading {
+  margin: -20px 10px 0px 10px;
+  padding: 4px;
+  background-image: linear-gradient(red, yellow);
+}
+
 .quickLinks {
   display: flex;
   align-items: center;

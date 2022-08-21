@@ -9,10 +9,18 @@ import grocery from "./../../images/grocery.webp";
 import top_offers from "./../../images/top_offers.webp";
 import electronics from "./../../images/electronics.webp";
 import appliances from "./../../images/appliances.webp";
+import { useSelector } from "react-redux";
 
 const QuickLinks = () => {
+  const name = useSelector((state) => state.name);
+  const isLogin = useSelector((state) => state.isLogin);
+
   return (
     <>
+      <div className="welcome-heading">
+        {isLogin && <h3>Welcome , {name}</h3>}
+        {!isLogin && <h3> Welcome, Please Sign In</h3>}
+      </div>
       <div className="quickLinks">
         <div className="topOffers">
           <img className="quickLink-img" src={top_offers} alt="topOffers" />

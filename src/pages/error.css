@@ -1,0 +1,24 @@
+.error-container {
+  /* border: 1px solid red; */
+  margin-top: -70px;
+  position: relative;
+}
+
+.error-img {
+  /* background-attachment: fixed; */
+  width: 500px;
+  margin: 10px 150px;
+  height: 500px;
+}
+
+.error-btn {
+  padding: 20px;
+  width: 120px;
+  margin: 0px;
+  background-color: rgb(108, 108, 228);
+  color: white;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 230px;
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { deals } from "../../assets/data";
 import clock from "./../../images/clock.png";
 import dealsSide from "./../../images/dealsSide.webp";
@@ -14,12 +14,9 @@ const DealsOfDay = () => {
   const [second, setSecond] = useState(60 - new Date().getSeconds());
   const [minute, setMinute] = useState(60 - new Date().getMinutes());
   const [hour, sethour] = useState(24 - new Date().getHours());
-  // const [cl, setCl] = useState("new");
-  const [button, setButton] = useState("left");
 
-  // const clickHandler = (e) => {
-  //   setCl("old");
-  // };
+  var c = document.querySelector(".deals-link-s");
+  var d = document.querySelector(".deals-link-sa");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -41,13 +38,25 @@ const DealsOfDay = () => {
   }
 
   const leftClickHandler = (e) => {
-    console.log("left");
-    setButton("left");
+    const width = c.clientWidth;
+    c.scrollLeft = c.scrollLeft - width;
   };
 
   const rightClickHandler = (e) => {
-    setButton("right");
-    console.log("right");
+    const width = c.clientWidth;
+    c.scrollLeft = c.scrollLeft + width;
+  };
+
+  const leftClickHandlerProducts = () => {
+    const width = d.clientWidth;
+    d.scrollLeft = d.scrollLeft - width;
+    console.log(width);
+  };
+
+  const rightClickHandlerProducts = () => {
+    const width = d.clientWidth;
+    d.scrollLeft = d.scrollLeft + width;
+    console.log(width);
   };
 
   return (
@@ -88,15 +97,23 @@ const DealsOfDay = () => {
                 />
               </svg>
             </button>
-            {deals.map((prod) => (
-              <Card
-                url={prod.url}
-                name={prod.name}
-                offer={prod.offer}
-                caption={prod.caption}
-                buttonClicked={button}
-              />
-            ))}
+            <div className="deals-link-s">
+              {deals.map((prod) => (
+                <NavLink
+                  activeClassName="n"
+                  className="deals-link"
+                  to={`/underwork`}
+                  key={prod.id}
+                >
+                  <Card
+                    url={prod.url}
+                    name={prod.name}
+                    offer={prod.offer}
+                    caption={prod.caption}
+                  />
+                </NavLink>
+              ))}
+            </div>
             <button
               className="right-arrow-button"
               type="button"
@@ -136,7 +153,7 @@ const DealsOfDay = () => {
         <div className="recent-searched ">
           <button
             type="button"
-            // onClick={leftClickHandler}
+            onClick={leftClickHandlerProducts}
             className="left-arrow-button-one"
           >
             <svg
@@ -154,24 +171,31 @@ const DealsOfDay = () => {
               />
             </svg>
           </button>
-          {suggestedItems.map((prod) => (
-            // <Link to={`/product/${prod.id}`}>
-            <PriceCard
-              name={prod.name}
-              rating={prod.rating}
-              ratings={prod.ratings}
-              newPrice={prod.newPrice}
-              oldPrice={prod.oldPrice}
-              offer={prod.offer}
-              pay={prod.pay}
-              url={prod.url}
-            />
-            // </Link>
-          ))}
+          <div className="deals-link-sa">
+            {suggestedItems.map((prod, i) => (
+              <NavLink
+                activeClassName="n"
+                className="deals-link"
+                to={`/product/${prod.id}`}
+                key={prod.ratings}
+              >
+                <PriceCard
+                  name={prod.name}
+                  rating={prod.rating}
+                  ratings={prod.ratings}
+                  newPrice={prod.newPrice}
+                  oldPrice={prod.oldPrice}
+                  offer={prod.offer}
+                  pay={prod.pay}
+                  url={prod.url}
+                />
+              </NavLink>
+            ))}
+          </div>
           <button
             className="right-arrow-button-one"
             type="button"
-            // onClick={rightClickHandler}
+            onClick={rightClickHandlerProducts}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

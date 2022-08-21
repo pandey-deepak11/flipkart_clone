@@ -1,6 +1,7 @@
 .container {
   margin: 10px 15px 10px 8px;
   position: relative;
+  /* z-index: -1; */
 }
 
 .left-arrow-button {
@@ -11,6 +12,7 @@
   top: 30%;
   left: 0px;
   border-width: 0px;
+  cursor: pointer;
 }
 
 .left-arrow {
@@ -31,6 +33,7 @@
   top: 30%;
   right: 0px;
   border-width: 0px;
+  cursor: s;
 }
 .carousel-img {
   width: 100%;

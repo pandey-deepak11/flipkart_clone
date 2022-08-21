@@ -1,10 +1,19 @@
 .navbar {
   width: 100%;
   /* position: relative; */
-  z-index: 3;
+
   position: fixed;
+  z-index: 3;
   top: 0px;
 }
+
+/* .navbar-bottom {
+  z-index: -1;
+} */
+
+/* .navbar-top {
+  z-index: 3;
+} */
 
 .navigation {
   width: 100%;
@@ -148,6 +157,7 @@
   background: #fb641b;
   color: white;
   font-size: 1.1rem;
+  cursor: pointer;
 }
 
 .navlink-class {

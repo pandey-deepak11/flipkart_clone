@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState } from "react";
 import "./carousel.css";
 import mattress from "./../../images/mattress.webp";
 import infinix_lap from "./../../images/infinix_lap.webp";
@@ -9,19 +9,6 @@ const Carousel = () => {
   const [active, setActive] = useState(0);
   const images = [mattress, infinix_lap, infinix_mobile];
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     if (active < images.length - 1 && active >= 0) {
-  //       setActive(active + 1);
-  //     }
-  //     if (active >= images.length - 1) {
-  //       setActive(0);
-  //     }
-  //   }, 3000);
-
-  //   return clearInterval(interval);
-  // }, [active]);
-
   const rightClickHandler = (e) => {
     if (active < images.length - 1 && active >= 0) {
       setActive(active + 1);
@@ -30,7 +17,7 @@ const Carousel = () => {
       setActive(0);
     }
   };
-  console.log(active);
+  // console.log(active);
 
   const leftClickHandler = () => {
     if (active === images.length) {

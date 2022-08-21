@@ -1,48 +1,64 @@
 import React from "react";
 import "./product.css";
+import { useParams } from "react-router-dom";
 import { suggestedItems } from "../../assets/data";
+import { useDispatch, useSelector } from "react-redux";
+import { flipkartActions } from "../../store/store";
+import { useHistory } from "react-router-dom";
 
 const Product = () => {
+  const history = useHistory();
+  const param = useParams();
+  const dispatch = useDispatch();
+  const isLogin = useSelector((state) => state.isLogin);
+  // console.log(param.productId);
+  const id = suggestedItems.find((prod) => prod.id === param.productId);
+  // console.log(id);
+
+  const addItemHandler = () => {
+    if (isLogin) {
+      dispatch(flipkartActions.cartItem(id));
+    } else {
+      history.replace("/cart");
+    }
+    // dispatch(flipkartActions.itemId(param.productId));
+  };
+
+  const BuyItemHandler = () => {
+    if (isLogin) {
+      dispatch(flipkartActions.cartItem(id));
+      history.push("/cart");
+    } else {
+      history.replace("/cart");
+    }
+
+    // dispatch(flipkartActions.itemId(param.productId));
+  };
+
   return (
     <>
       <section className="product-main">
         <article className="product-container">
           <div className="product-main-img">
-            <img
-              className="product-img"
-              src={suggestedItems[0].url}
-              alt="image"
-            />
+            <img className="product-img" src={id.url} alt="url" />
           </div>
           <div className="product-main-details">
-            <p className="product-main-name">{suggestedItems[0].name}</p>
+            <p className="product-main-name">{id.name}</p>
             <div className="product-main-price">
-              <p className="product-main-newPrice">
-                {suggestedItems[0].newPrice}
-              </p>
-              <p className="product-main-oldPrice">
-                {suggestedItems[0].oldPrice}
-              </p>
+              <p className="product-main-newPrice">{id.newPrice}</p>
+              <p className="product-main-oldPrice">{id.oldPrice}</p>
             </div>
             <div className="product-main-offers">
-              <p className="product-main-rating">
-                {suggestedItems[0].rating}⭐
-              </p>
-              <p className="product-main-ratings">
-                {suggestedItems[0].ratings}
-              </p>
-              <p className="product-main-offers">{suggestedItems[0].offer}</p>
+              <p className="product-main-rating">{id.rating}⭐</p>
+              <p className="product-main-ratings">{id.ratings}</p>
+              <p className="product-main-offers">{id.offer}</p>
             </div>
-            <p className="product-main-seller">
-              Seller : {suggestedItems[0].seller}
-            </p>
-            <p className="product-main-color">
-              Color : {suggestedItems[0].color}
-            </p>
+            <p className="product-main-seller">Seller : {id.seller}</p>
+            <p className="product-main-color">Color : {id.color}</p>
             <img
               className="product-main-supercoin"
               src="https://rukminim1.flixcart.com/lockin/710/170/images/CCO__PP_2019-07-14.png?q=50"
-              alt="image"
+              alt="supercoin"
             />
           </div>
         </article>
@@ -50,7 +66,7 @@ const Product = () => {
           <h4>Product Description</h4>
         </div> */}
         <article className="product-main-btn">
-          <button className="btn-addCart">
+          <button onClick={addItemHandler} className="btn-addCart">
             {" "}
             <svg
               className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv btn-svg"
@@ -63,7 +79,7 @@ const Product = () => {
             </svg>{" "}
             Add to Cart
           </button>
-          <button className="btn-buy">
+          <button onClick={BuyItemHandler} className="btn-buy">
             {" "}
             <svg
               className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv btn-svg"

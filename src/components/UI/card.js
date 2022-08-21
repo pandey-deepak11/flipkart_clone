@@ -11,9 +11,11 @@ const Card = ({ url, name, offer, caption, buttonClicked }) => {
       setCl("");
     }
 
-    console.log(buttonClicked);
+    // console.log(buttonClicked);
     if (buttonClicked === "right") {
       setCl("visible");
+      // document.querySelector(".card-container").style.transform =
+      // ("translateX(100%)");
     }
     if (buttonClicked === "left") {
       setCl("hidden");

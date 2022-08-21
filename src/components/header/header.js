@@ -1,29 +1,34 @@
-import React, { useState } from "react";
-import { NavLink, Route } from "react-router-dom";
+import React from "react";
+import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import "./header.css";
 import logo from "./../../images/logo.png";
 import plusIcon from "./../../images/plus_icon.png";
-import search_icon from "./../../images/search_icon.png";
 import carrt from "./../../images/cart.png";
 import { flipkartActions } from "../../store/store";
 
-const Header = (props) => {
-  const [isLogin, setIsLogin] = useState(false);
+const Header = () => {
+  // const [isLogging, setisLogging] = useState(false);
+  const isLogin = useSelector((state) => state.isLogin);
+  const isLogging = useSelector((state) => state.isLogging);
+  const products = useSelector((state) => state.totalProducts);
   const dispatch = useDispatch();
 
   const loginHandler = () => {
     // console.log(props);
-    dispatch(flipkartActions.isLogin(true));
+    dispatch(flipkartActions.isLogging(true));
   };
 
   const logoutHandler = () => {
-    setIsLogin(false);
+    // setisLogging(true);
+    dispatch(flipkartActions.isLogging(false));
     dispatch(flipkartActions.isLogin(false));
   };
 
+  const a = isLogging ? "navbar-bottom" : "navbar";
+
   return (
-    <div className="navbar">
+    <div className=" navbar navbar-bottom">
       <nav className="navigation">
         <NavLink to="/home">
           <div className="logo">
@@ -43,7 +48,7 @@ const Header = (props) => {
             name="search"
             placeholder="Search for products, brands and more "
           />
-          {isLogin ? (
+          {isLogin && !isLogging ? (
             <div className="myAcc">
               <p>
                 {" "}
@@ -105,7 +110,8 @@ const Header = (props) => {
         </div>
         <div className="cart">
           <img className="cartImg" src={carrt} alt="cart" />
-          <p className="quantity">6</p>
+          {isLogin ? <p className="quantity">{products.length}</p> : ""}
+
           <NavLink activeClassName="navlink-class" to="/cart">
             <p style={{ color: "white", textDecoration: "none" }}>Cart</p>
           </NavLink>

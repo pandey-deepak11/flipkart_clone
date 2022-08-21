@@ -38,10 +38,3 @@
 .card-caption {
   opacity: 0.6;
 }
-
-.visible {
-  transform: translateX(200%);
-}
-
-.hidden {
-}

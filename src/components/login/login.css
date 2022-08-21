@@ -3,6 +3,11 @@ body {
   /* position: relative; */
 }
 
+.modal {
+  position: relative;
+  z-index: 10;
+}
+
 .login-modal {
   width: 50%;
   /* background: red; */
@@ -11,6 +16,8 @@ body {
   top: -20px;
   left: 40px;
   z-index: 10; */
+  /* position: relative;
+  z-index: 999; */
   margin: 15px 60px 15px 330px;
 }
 
@@ -25,8 +32,8 @@ body {
   color: white;
   background: #2874f0;
   padding: 20px;
-  /* position: relative; */
-  /* z-index: 5; */
+  /* position: relative;
+  z-index: 5; */
 }
 
 .login-text {
@@ -137,8 +144,8 @@ label {
 
 .login-close {
   position: absolute;
-  top: 20px;
-  right: 250px;
+  top: 60px;
+  right: 230px;
   width: 30px;
   height: 30px;
   cursor: pointer;
